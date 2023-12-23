@@ -17,6 +17,7 @@ const pages = [
   { id: 2, name: "About", to: "/About" },
   { id: 3, name: "Period Tracker", to: "/PeriodTracker" },
   { id: 4, name: "Location", to: "/Location" },
+  { id: 5, name: "Emergency", to: "/Emergency" },
 ];
 
 function Header() {

@@ -1,0 +1,77 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.i1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  z-index: -1;
+  height: 50vh;
+}
+.i2 {
+  position: absolute;
+  bottom: 20%;
+  left: -7%;
+  z-index: -1;
+  height: 35vh;
+}
+.wrapper h2{
+  font-weight: 600;
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  padding: 0 2rem;
+  text-align: center;
+  color: rgb(165, 67, 42);
+}
+.wrapper h3{
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.lastPeriod{
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+.lastPeriod input{
+  height: 2rem;
+  width: 8rem;
+  border-color:rgb(165, 67, 42);
+  border-radius: 4px;
+}
+.calender{
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin-bottom: 0;
+}
+.specify{
+  margin-top: 0;
+  padding-top: 0;
+  ul{
+    margin-top: 0;
+    padding-top: 0;
+    list-style: none;
+    font-family: 'Caveat', cursive;
+  }
+  li{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: large;
+  }
+}
+.icon1{
+  color: pink;
+}
+.icon2{
+  color: red;
+}
