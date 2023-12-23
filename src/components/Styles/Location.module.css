@@ -17,6 +17,7 @@
   z-index: 1;
   margin-left: 5rem;
 }
+
 .wrapper button:hover {
   color: white;
   transform: scale(1.05);
