@@ -1,0 +1,110 @@
+@import "./contants.css";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+
+.wrapper {
+  overflow: hidden;
+  height: 80vh;
+  padding: 15vh;
+  padding-top: 25vh;
+  position: relative;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+.upperElements {
+  @media (max-width: sm) {
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Caveat", cursive;
+}
+.lowerElements {
+  @media (max-width: sm), (max-width: md) {
+    margin-top: 4rem;
+    gap: 2rem;
+    justify-content: center;
+  }
+  margin-top: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Caveat", cursive;
+}
+.experience {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.experience > :nth-child(2) {
+  line-height: 25px;
+}
+.certificate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.certificate img {
+  margin-bottom: 1rem;
+  width: 3.5rem;
+}
+.person {
+  @media (max-width: sm), (max-width: md) {
+    position: relative;
+    left: 0;
+    background-size: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: bottom;
+  }
+  position: absolute;
+  bottom: -2rem;
+  margin: auto;
+  background: url("https://static.vecteezy.com/system/resources/previews/004/686/824/original/caver-minimal-floral-line-art-modern-abstract-background-trendy-design-pastel-color-palette-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+  left: 30%;
+  z-index: -1;
+}
+.person img {
+  @media (max-width: sm) {
+    width: 23rem;
+  }
+  height: 75vh;
+}
+.email {
+  @media (max-width: sm) {
+    position: relative;
+    display: none;
+  }
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: orange;
+}
+.i1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  z-index: -1;
+  height: 50vh;
+}
+.i2 {
+    position: absolute;
+    bottom: 20%;
+    left: -7%;
+    z-index: -1;
+    height: 35vh;
+  }
