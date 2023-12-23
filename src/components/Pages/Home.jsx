@@ -3,6 +3,7 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "../Styles/Home.module.css";
 import { motion } from "framer-motion";
 import img1 from "./1.png"
+import About from "./About";
 const Home = () => {
   const imgurl="https://static.vecteezy.com/system/resources/previews/014/273/466/non_2x/abstract-colorful-blob-shapes-element-design-free-png.png";
   const imgurl2="https://i.pinimg.com/originals/c5/36/c9/c536c9cdd607000657528893e5005848.png";
@@ -54,6 +55,10 @@ const Home = () => {
           </motion.div>
         </div>
       </motion.div>
+      <div className={css.line}/> 
+      <div className={css.aboutwala}>
+      <About showImages={false}/>
+      </div>
     </section>
   );
 };

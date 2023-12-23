@@ -1,0 +1,27 @@
+.card {
+    width: 25vh;
+    height: 30vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(252, 209, 197, 0.3);
+    border-radius: 20px;
+    padding: 0px 20px 2rem 20px;
+  }
+  .card span:nth-of-type(2) {
+    color: gray;
+    font-size: 1rem;
+  }
+  .card > img {
+    transform: scale(0.4);
+    margin-top: -7rem;
+    margin-bottom: -8rem;
+  }
+  /* cards */ 
+  @media screen and (max-width: 480px){
+    .card{
+      width: auto;
+    }
+  }

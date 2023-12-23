@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+
+.services {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-top: 20vh;
+    /* scroll view */
+    padding-top: 3rem;
+    padding-left: 10vw;
+  }
+  /* left side */
+  .awesome {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: -10vw;
+    /* gap: 20px; */
+  }
+  .awesome > :nth-child(1) {
+    color: rgb(165, 77, 42);
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Caveat',cursive;
+  }
+  .awesome > :nth-child(2) {
+    color: rgb(165, 77, 42);
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Caveat',cursive;
+  }
+  .awesome > :nth-child(3) {
+    color: gray;
+    font-size: 1rem;
+    max-width: 30vw;
+    margin-top: 3rem;
+  }
+  .s-button {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+  /* right sided */
+  .cards {
+    position: relative;
+  }
+  .cards > * {
+    position: absolute;
+  }
+  
+  /* blur */
+  .s-blur2 {
+    left: 14rem;
+    top: 8rem;
+  }
+  
+  .s-blur1 {
+    top: 13rem;
+    left: -18rem;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .services {
+      margin-top: 0;
+      flex-direction: column;
+      gap: 5rem;
+      height: 66rem;
+      padding: 0;
+    }
+  
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 17rem;
+    }
+    .cards > * {
+      position: static;
+    }
+  }
+  .i1 {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    z-index: -1;
+    height: 50vh;
+  }
+  .i2 {
+      position: absolute;
+      bottom: 20%;
+      left: -7%;
+      z-index: -1;
+      height: 35vh;
+    }
