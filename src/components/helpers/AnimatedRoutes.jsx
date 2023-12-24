@@ -6,6 +6,7 @@ import Location from "../Pages/Location";
 import React from 'react';
 import PeriodTracker from "../Pages/PeriodTracker";
 import Fitness from "../Pages/Fitness";
+import Emergency from "../Pages/Emergency";
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
@@ -16,6 +17,7 @@ const AnimatedRoutes = () => {
         <Route path="/Location" element={<Location/>} />
         <Route path="/PeriodTracker" element={<PeriodTracker/>} />
         <Route path="/Fitness" element={<Fitness/>} />
+        <Route path="/Emergency" element={<Emergency/>} />
       </Routes>
     </AnimatePresence>
   );
