@@ -37,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={classes.contact}>
-          <h4>New Arrivals!</h4>
+          <h4>New Updates!</h4>
           <h4>For Staying Updated</h4>
           <p>Subscribe to get latest on news and many more.</p>
           <button>Subscribe!</button>

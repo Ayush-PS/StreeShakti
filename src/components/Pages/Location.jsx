@@ -23,6 +23,18 @@ const Location = () => {
     }
   };
 
+  const handleShareLocation = () => {
+    if (navigator.share && location) {
+      navigator.share({
+        title: "My Location",
+        text: `Latitude: ${location.latitude}, Longitude: ${location.longitude}`,
+        url: `https://maps.google.com/?q=${location.latitude},${location.longitude}`,
+      });
+    } else {
+      console.error("Web Share API is not supported or location not available.");
+    }
+  };
+
   const customIcon = new L.Icon({
     iconUrl:
       "https://pngfreepic.com/wp-content/uploads/2021/02/location-13-lg.png",
@@ -62,7 +74,7 @@ const Location = () => {
               <Popup>Your Live Location</Popup>
             </Marker>
           </MapContainer>
-          <button>Share</button>
+          <button onClick={handleShareLocation}>Share</button>
         </div>
       )}
     </div>
