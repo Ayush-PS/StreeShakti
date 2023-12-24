@@ -7,7 +7,7 @@ import img3 from "./33.png";
 import img4 from "./44.png";
 import css from "../Styles/Fitness.module.css";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer,slideIn } from "../../utils/motion";
 import back from "./back.png";
 import ExBox from "../helpers/ExBox";
 import { useState } from "react";
@@ -126,6 +126,7 @@ const Fitness = () => {
         <ExBox image={img2} title="Squats" />
         <ExBox image={img3} title="Cardio Excercise" />
       </div>
+      <motion.div variants={slideIn("up", "tween", 0.5, 1.3)}>
       <Container
         style={{
           marginTop: "2rem",
@@ -203,6 +204,7 @@ const Fitness = () => {
           </div>
         </Paper>
       </Container>
+      </motion.div>
     </motion.div>
   );
 };

@@ -1,107 +1,129 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
-  Container,
-  Paper,
-  TextField,
+  Box,
+  Card,
+  CardContent,
   Button,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+  TextField,
+} from "@mui/material";
+import css from "../Styles/Emergency.module.css";
+import { motion } from "framer-motion";
+import {slideIn, staggerContainer } from "../../utils/motion";
+
+const initialContact = { name: "", phoneNumber: "" };
 
 const Emergency = () => {
-  const [exerciseList, setExerciseList] = useState([]);
-  const [exercise, setExercise] = useState({
-    name: '',
-    duration: '',
-    calories: '',
-  });
+  const [contacts, setContacts] = useState([
+    { name: "Emergency Contact 1", phoneNumber: "123-456-7890" },
+    { name: "Emergency Contact 2", phoneNumber: "987-654-3210" },
+  ]);
 
-  const handleChange = (e) => {
+  const [newContact, setNewContact] = useState(initialContact);
+
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setExercise({ ...exercise, [name]: value });
+    setNewContact((prevContact) => ({ ...prevContact, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setExerciseList([...exerciseList, exercise]);
-    setExercise({ name: '', duration: '', calories: '' });
+  const addContact = () => {
+    if (newContact.name && newContact.phoneNumber) {
+      setContacts((prevContacts) => [...prevContacts, newContact]);
+      setNewContact(initialContact);
+    }
   };
-
+  const imgurl =
+    "https://static.vecteezy.com/system/resources/previews/014/273/466/non_2x/abstract-colorful-blob-shapes-element-design-free-png.png";
+  const imgurl2 =
+    "https://i.pinimg.com/originals/c5/36/c9/c536c9cdd607000657528893e5005848.png";
   return (
-    <Container
-      style={{
-        marginTop: '2rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={`innerWidth ${css.container}`}
     >
-      <Paper
-        style={{
-          width: '80%',
-          padding: '1.5rem',
-        }}
-        elevation={3}
+      <Box
+        alignItems="center"
+        minHeight="100vh"
+        p={4}
+        justifyContent="center"
+        textAlign="center"
+        className={css.wrapper}
       >
-        <Typography variant="h4" gutterBottom>
-          Fitness Tracker
-        </Typography>
-
-        <form
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
-          }}
-          onSubmit={handleSubmit}
-        >
+        <img src={imgurl} alt="" className={css.i1} />
+        <img src={imgurl2} alt="" className={css.i2} />
+        <Box mt={20} mb={10}>
+          <Typography variant="h2" fontFamily="Caveat" gutterBottom>
+            Add New Contact
+          </Typography>
           <TextField
-            label="Exercise Name"
+            label="Name"
             variant="outlined"
             name="name"
-            value={exercise.name}
-            onChange={handleChange}
+            value={newContact.name}
+            onChange={handleInputChange}
+            style={{ marginRight: "16px" }}
             required
           />
           <TextField
-            label="Duration (minutes)"
+            label="Phone Number"
             variant="outlined"
-            type="number"
-            name="duration"
-            value={exercise.duration}
-            onChange={handleChange}
+            name="phoneNumber"
             required
+            value={newContact.phoneNumber}
+            onChange={handleInputChange}
+            style={{ marginRight: "16px" }}
           />
-          <TextField
-            label="Calories Burned"
-            variant="outlined"
-            type="number"
-            name="calories"
-            value={exercise.calories}
-            onChange={handleChange}
-            required
-          />
-          <Button variant="contained" color="primary" type="submit">
-            Add Exercise
+          <Button
+            variant="contained"
+            style={{ backgroundColor: "rgb(165, 65, 42)" }}
+            onClick={addContact}
+          >
+            Add Contact
           </Button>
-        </form>
-
-        <div style={{ marginTop: '1.5rem' }}>
-          <Typography variant="h6">Exercise Log</Typography>
-          <List>
-            {exerciseList.map((item, index) => (
-              <ListItem key={index}>
-                <ListItemText
-                  primary={`${item.name} - Duration: ${item.duration} minutes, Calories Burned: ${item.calories}`}
-                />
-              </ListItem>
+        </Box>
+        <motion.div variants={slideIn("up", "tween", 0.1, 1)}>
+          <Box display="flex" justifyContent="center">
+            {contacts.map((contact, index) => (
+              <Card
+                key={index}
+                style={{
+                  margin: "16px",
+                  minWidth: "250px",
+                  maxWidth: "300px",
+                  textAlign: "center",
+                }}
+              >
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    {contact.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Phone: {contact.phoneNumber}
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundColor: "rgb(165, 65, 42)",
+                      marginTop: "16px",
+                    }}
+                    href={`tel:${contact.phoneNumber}`}
+                  >
+                    Call Now
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
-          </List>
-        </div>
-      </Paper>
-    </Container>
+          </Box>
+        </motion.div>
+      </Box>
+    </motion.div>
   );
 };
 
