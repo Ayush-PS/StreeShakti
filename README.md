@@ -4,7 +4,7 @@
 
 The StreeShakti is a multifunctional application designed to cater to the diverse needs and well-being of women. This app includes features such as a Fitness Tracker, Period Tracker, Emergency Calls, and Live Location Sharing to empower and support women in various aspects of their lives.
 
-![Overview](https://drive.google.com/uc?id=1gY8Db7JSJXH_fKbXZkGLI4g4DPJyKj9T)
+![Overview](https://drive.google.com/uc?id=100HvbEeT79CiohLVOmymU0mlgXre5PNS)
 
 ## Features
 
