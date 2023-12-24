@@ -17,6 +17,7 @@ const pages = [
   { id: 2, name: "About", to: "/About" },
   { id: 3, name: "Period Tracker", to: "/PeriodTracker" },
   { id: 4, name: "Location", to: "/Location" },
+  { id: 4, name: "Fitness", to: "/Fitness" },
   { id: 5, name: "Emergency", to: "/Emergency" },
 ];
 
@@ -150,13 +151,13 @@ function Header() {
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    mr: 7,
+                    mr: 5,
                     color: "black",
                     display: "block",
-                    fontWeight: "800",
+                    fontWeight: "600",
                     borderRadius: 2,
-                    pl: "1.3rem",
-                    pr: "1.3rem",
+                    pl: "1rem",
+                    pr: "1rem",
                     "&:hover": {
                       backgroundColor: "#FFE6CA", // 50% transparency
                     },

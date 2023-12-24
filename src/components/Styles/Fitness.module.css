@@ -1,0 +1,34 @@
+.i1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  z-index: -1;
+  height: 50vh;
+}
+.i2 {
+  position: absolute;
+  bottom: 20%;
+  left: -7%;
+  z-index: -1;
+  height: 40vh;
+}
+.back{
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    bottom: 60vh;
+}
+.acontainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.h{
+    text-align: center;
+    margin: auto;
+    font-size: 5rem;
+    font-family: 'Caveat',cursive;
+    color: brown;
+    margin-bottom: 10vh;
+    margin-top: -5vh;
+}
